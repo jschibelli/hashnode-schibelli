@@ -1,5 +1,7 @@
 ---
 title: "From Setback to Comeback: My Stroke Recovery Journey with AI"
+seoTitle: "From Setback to Comeback: My Stroke Recovery Journey with AI"
+seoDescription: "Discover an inspiring stroke recovery journey, highlighting the transformative power of AI tools and unwavering support from loved ones"
 datePublished: Fri May 02 2025 14:22:24 GMT+0000 (Coordinated Universal Time)
 cuid: cma6vuzby000109i3ehfh4b42
 slug: from-setback-to-comeback-my-stroke-recovery-journey-with-ai
