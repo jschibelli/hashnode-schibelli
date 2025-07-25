@@ -6,6 +6,7 @@ datePublished: Fri Jul 25 2025 17:28:40 GMT+0000 (Coordinated Universal Time)
 cuid: cmdj3i2vi000i02la55f6hm16
 slug: how-i-use-gpt-to-scope-and-estimate-freelance-projects-without-burning-hours
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1753464145122/25cb113d-9eba-45a8-836b-4640db0a32ec.png
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1753471463014/6df6435f-1831-44e2-b6fb-5a9972db1a82.png
 tags: productivity, webdev, freelancing, nextjs, ai-tools
 
 ---
