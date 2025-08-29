@@ -54,7 +54,9 @@ SMBs need website chat that actually helps customers without enterprise pricing 
 
 :::pricing Plan, Price, Bots, Conversations, Storage, Branding, Analytics, Notes Free, $0, 1, 100/mo, 50MB, Powered by Tendril, None, Entry for demos Pro, $49, 3, 5,000/mo, 5GB, Custom logos & colors, Basic metrics, Direct competitor to Tidio $59 Agency, $199, 10, 20,000/mo, 20GB, White-label + custom domains, Advanced analytics, Multi-tenant control panel :::
 
-:::comparison Product, Entry plan, Billing model, Branding, Notes Tendril, $49 Pro, Flat (no per-seat), Included at Pro, Multi-tenant by design Intercom, $39–$139/seat, Per-seat + AI usage, Higher plans, AI $0.99 per resolution Drift, ~$2,500/mo, Quote-based, Limited, Annual contracts Chatbase, $40–$500, Tiered usage, Add-on fee, Extra for domain/branding Tidio, $29–$59, Conversations-based, Limited on lower plans, Unlimited seats :::
+:::comparison 
+Product, Entry plan, Billing model, Branding, Notes Tendril, $49 Pro, Flat (no per-seat), Included at Pro, Multi-tenant by design Intercom, $39–$139/seat, Per-seat + AI usage, Higher plans, AI $0.99 per resolution Drift, ~$2,500/mo, Quote-based, Limited, Annual contracts Chatbase, $40–$500, Tiered usage, Add-on fee, Extra for domain/branding Tidio, $29–$59, Conversations-based, Limited on lower plans, Unlimited seats 
+:::
 
 :::kpis label, value Setup time, Under 30 minutes Bots at $49, 3 Conversations/month, 5,000 Resolution rate, 60–75% (target) :::
 
