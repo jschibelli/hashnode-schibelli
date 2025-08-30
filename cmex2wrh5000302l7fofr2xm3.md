@@ -1,13 +1,11 @@
 ---
-title: "A Multi-Tenant Chatbot MVP That Fits SMBs"
+title: "Tendril Multi-Tenant Chatbot: From Market Research to MVP Strategy"
 datePublished: Fri Aug 29 2025 17:00:34 GMT+0000 (Coordinated Universal Time)
 cuid: cmex2wrh5000302l7fofr2xm3
-slug: a-multi-tenant-chatbot-mvp-that-fits-smbs
+slug: tendril-multi-tenant-chatbot-from-market-research-to-mvp-strategy
 tags: case-study
 
 ---
-
-# Tendril Multi-Tenant Chatbot SaaS: From Market Research to MVP Strategy
 
 ## Problem Statement
 
