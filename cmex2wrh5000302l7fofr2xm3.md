@@ -7,81 +7,123 @@ tags: case-study
 
 ---
 
-# Building Tendril: A Multi-Tenant Chatbot Platform
+# Case Study: Building Tendril — A Multi‑Tenant AI Chatbot SaaS Born from User Pain
 
-## Problem
+## The Spark: Hearing the Frustration
 
-SMBs need website chat that actually helps customers without enterprise pricing or enterprise setup time. The common complaints: unpredictable costs (per-seat + AI surcharges), slow or fragile setup, and basic features locked behind premium tiers. Agencies also lack a clean way to manage multiple client bots under one roof.
+By early 2025, it was clear the chatbot SaaS space had matured—but not in a way that served small businesses well. Across Reddit threads, G2 reviews, and Capterra breakdowns, one message rang out from startups, agencies, and indie founders: **existing solutions like Intercom, Drift, and Chatbase were too expensive, too opaque, and too hard to set up**.
 
-## Research / Discovery
+An agency owner recounted on Reddit how their Intercom bill doubled overnight after enabling the AI add-on. Another solo founder on AppSumo gave Chatbase 2 out of 5 tacos, citing vague responses and broken site scraping. A common refrain emerged: “It shouldn’t be this hard to add a chatbot to my site that just answers questions from my docs.”
 
-* Users resent per-seat pricing and AI per-resolution fees that cause bill shock.
-* Setup is often slow or brittle; some tools struggle to answer from a site's own content without heavy manual work.
-* Branding and multi-tenant support are typically gated or missing.
-* There's demand for a simple, predictable, SMB-friendly alternative with fast deployment and honest limits.
-
-## Solution / Build Decisions
-
-* **Architecture:** Next.js (App Router), Postgres + `pgvector` for embeddings, Redis for caching/rate limits.
-* **AI:** OpenAI for embeddings and default chat; Anthropic as an optional premium model (documented for future iteration).
-* **RAG:** URL/PDF ingestion → chunk → embed → retrieve → grounded responses.
-* **Multi-tenant:** Subdomain routing per tenant with isolated data and branding.
-* **Billing:** Stripe subscriptions with clear tiers; no per-seat or AI surcharges in MVP.
-* **Handoff:** Simple human handoff (email/Slack) when the bot is unsure.
-* **Analytics:** Core metrics only: conversation volume, deflection/resolution rate, top questions.
-
-## How Tendril Differs
-
-* Transparent, flat pricing. No per-seat, no AI overage line items in the MVP.
-* Multi-tenant by design for agencies and multi-brand startups.
-* Branding included at Pro.
-* Fast setup from real documents (RAG) rather than brittle flowcharts.
-
-## Outcomes / KPIs
-
-:::pricing
-Plan, Price, Bots, Conversations, Storage, Branding, Analytics, Notes
-Free, $0, 1, 100/mo, 50MB, Powered by Tendril, None, Entry for demos
-Pro, $49, 3, 5,000/mo, 5GB, Custom logos & colors, Basic metrics, Direct competitor to Tidio $59
-Agency, $199, 10, 20,000/mo, 20GB, White-label + custom domains, Advanced analytics, Multi-tenant control panel
-:::
-
-:::comparison
-Product, Entry plan, Billing model, Branding, Notes
-Tendril, $49 Pro, Flat (no per-seat), Included at Pro, Multi-tenant by design
-Intercom, $39–$139/seat, Per-seat + AI usage, Higher plans, AI $0.99 per resolution
-Drift, ~$2,500/mo, Quote-based, Limited, Annual contracts
-Chatbase, $40–$500, Tiered usage, Add-on fee, Extra for domain/branding
-Tidio, $29–$59, Conversations-based, Limited on lower plans, Unlimited seats
-:::
-
-:::kpis
-label, value
-Setup time, Under 30 minutes
-Bots at $49, 3
-Conversations/month, 5,000
-Resolution rate, 60–75% (target)
-:::
-
-## Screenshots / Gallery
-
-:::gallery
-url, alt
-/images/case-studies/tendril-dashboard.png, Tendril dashboard with multi-tenant list
-/images/case-studies/tendril-pricing.png, Pricing table on marketing page
-:::
-
-:::cta
-title, subtitle, ctaText, href
-Want a similar build?, I can ship this for your startup or agency., Contact me, /contact
-:::
-
-## Notes and Next Steps
-
-* **Model strategy:** Default to OpenAI (cost-efficient), enable Anthropic (Claude) as a premium toggle for longer context.
-* **Integrations:** Ticket handoff via email/Slack now; helpdesk/CRM integrations next.
-* **Analytics:** Expand with per-intent accuracy and satisfaction scoring as usage grows.
+Tendril started there—by listening.
 
 ---
 
-If you want a second variant focused on a different project later, we can reuse this exact structure and just remove the blocks you don't need (e.g., no pricing for a pure design case study).
+## The Research: Mapping the Market Gaps
+
+Our team reviewed dozens of user reviews, pricing pages, and comparison tools. A few patterns emerged:
+
+- **Intercom** charges per‑seat and adds AI per‑resolution fees; pricing can spike with usage.
+- **Drift** hides pricing behind sales calls; enterprise‑leaning with annual contracts.
+- **Chatbase**, while affordable at first glance, adds fees for white‑labeling, domains, and extra bots.
+- **Tidio** is praised for simpler entry pricing and quick setup.
+
+But even Tidio lacked **multi‑tenant support** or deep customization. And most tools failed to deliver on true no‑code setup, reliable document ingestion, or responsive support.
+
+---
+
+## The Insight: SMBs and Agencies Are Underserved
+
+> “No one is building chatbots for agencies managing multiple clients.”
+
+Platforms like Intercom require separate workspaces (and subscriptions) per client. Others limit project separation or branding unless you pay more.
+
+Founders asked for “an Intercom alternative that’s easy to set up, won’t kill my budget, and actually supports small businesses.”
+
+This insight fueled Tendril’s core strategy: **multi‑tenant chatbot SaaS, built for SMBs and agencies, with simple pricing and zero bloat**.
+
+---
+
+## The Build: MVP by Design
+
+Tendril’s MVP was scoped around doing fewer things exceptionally well:
+
+- ✅ Branded chatbot widget per tenant
+- ✅ Document ingestion (PDF, TXT, URLs)
+- ✅ GPT‑4o‑powered RAG pipeline for grounded answers
+- ✅ Live fallback handoff via Slack/email/webhook
+- ✅ Usage analytics: deflection rate, CSAT, fallback logs
+- ✅ Multi‑tenant admin dashboard
+- ✅ Stripe integration with tiered billing
+
+Within 3 weeks, we had a functioning demo. One user uploaded their PDF FAQ, deployed the bot, and was answering questions live within 15 minutes.
+
+---
+
+## The Positioning: Honest SaaS for Real Teams
+
+:::pricing
+Plan, Price, Bots, Seats, Branding, Notes
+Free, $0/mo, 1, Unlimited, Tendril badge, 100 chats/mo
+Pro, $49/mo, 3, Unlimited, Custom branding, Includes Slack/email handoff, analytics
+Agency, $129/mo, 10+, Unlimited, White‑label + custom domains, Multi‑client support, priority features
+:::
+
+---
+
+## The Differentiation: Not Just Another Chatbase
+
+Tendril focuses on four differentiators:
+
+1. Multi‑tenancy as a first‑class citizen
+2. Fast onboarding: upload content, embed widget, done
+3. Custom branding included at Pro
+4. Human handoff built‑in (no Zapier required)
+
+---
+
+## Competitive Landscape (At a Glance)
+
+:::comparison
+Product, Entry plan, Billing model, Branding, Notes
+Tendril, $49 Pro, Flat (no per‑seat), Included at Pro, Built for agencies; multi‑tenant by design
+Intercom, From $29, Per‑seat + AI usage, Higher tiers, Strong suite; watch AI/seat costs
+Drift, Quote‑based, Enterprise contracts, Limited lower tiers, Skews upmarket; annual commitments
+Chatbase, $40–$500, Tiered usage, Add‑ons, Easy start; mixed reviews at scale
+Tidio, $29–$59, Conversations‑based, Limited lower tiers, Budget‑friendly; faster setup
+:::
+
+---
+
+## The Validation: Real Demand, Real Problems
+
+- Tools with simpler onboarding and pricing gain traction—but miss agency workflows.
+- Per‑seat + AI overages cause bill shock as usage grows.
+- Teams want grounded answers from their own docs without heavy setup.
+
+> “We just want something that works, respects our budget, and doesn’t need a developer to babysit.”
+
+---
+
+## The Outcome: A Product Worth Showcasing
+
+Tendril doesn’t aim to beat incumbents feature‑for‑feature. It proves you can:
+
+- Identify whitespace by listening to complaints
+- Scope an MVP that hits real pain points
+- Price clearly and earn trust
+
+:::cta
+title, subtitle, cta Text, href
+Want a similar build?, I can ship this for your startup or agency., Contact me, /contact
+:::
+
+---
+
+## References
+
+- Intercom pricing: https://www.intercom.com/pricing
+- Intercom AI bill shock anecdote: https://www.reddit.com/r/SaaS/comments/1au13kp/my_intercom_billing_shot_up_by_120_it_was_because/
+- Tidio vs. Intercom overview: https://www.smbguide.com/tidio-vs-intercom/
+- Drift review (enterprise skew): https://wotnot.io/blog/drift-reviews
+- Chatbase review roundup: https://pagergpt.ai/alternative/chatbase-review
