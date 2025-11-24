@@ -1,6 +1,6 @@
 ---
 title: "Portfolio OS v1.0.0: Building a Self-Documenting Development Platform"
-seoTitle: "Portfolio OS v1.0.0 – A Self-Documenting Next.js Development Platform "
+seoTitle: "Portfolio OS v1.0.0 – A Self-Documenting Next.js Development Platform"
 seoDescription: "Discover how I built Portfolio OS v1.0.0 — a Next.js 15 and TypeScript-based self-documenting development platform that uses AI-assisted workflows and Power"
 datePublished: Mon Nov 24 2025 20:39:46 GMT+0000 (Coordinated Universal Time)
 cuid: cmidm1rip000002ieax546f34
